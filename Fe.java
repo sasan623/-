@@ -46,12 +46,12 @@ public class Fe {
 		}
 	 }
 	public static void recursion(int x, int y, int count) {
-
-		if(x==n-2 && y==n-2)
+		 int a=2;
+		if(x==n-a && y==n-a) {
 
 			min = Math.min(count, min);
 
-		else {
+		}else {
 
 			maze[x][y]=1;
 
@@ -77,8 +77,13 @@ public class Fe {
 
 				recursion(x, y-1, count+1);			
 
-			}
-
+			    }
+			 {
+	                if(x+1==maze.length){
+	                    System.out.println("数组将溢出:X="+(x+1)+",y="+(y));
+	                }
+	                recursion(x+1,y,count+1);
+	            }
 			
 
 			maze[x][y]=0;

@@ -41,7 +41,7 @@ public class Fe {
 		
 		else {
 
-			System.out.println(min);
+			System.out.println("最短距离是"+min+"个");
 	      }
 		}
 	 }
